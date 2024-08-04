@@ -8,11 +8,18 @@ function updateCart() {
     let cartContents = document.getElementById('cart-contents');
     cartContents.innerHTML = '';
     let total = 0;
+    let hasItems = false;
+
     for (let key in cart) {
         if (cart[key].quantity > 0) {
+            hasItems = true;
             cartContents.innerHTML += `<div>${key.replace('product', 'Product-')} × ${cart[key].quantity} × ${cart[key].price}</div>`;
             total += cart[key].quantity * cart[key].price;
         }
+    }
+
+    if (!hasItems) {
+        cartContents.innerHTML = '<div>The Cart Is Empty.</div>';
     }
     document.getElementById('total').innerText = total;
 }
