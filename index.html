@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="products">
+            <h2>Products</h2>
+            <div class="product">
+                <span>Product-1</span>
+                <span>100</span>
+                <button onclick="decrement('product1')">-</button>
+                <span id="product1-quantity">0</span>
+                <button onclick="increment('product1')">+</button>
+            </div>
+            <div class="product">
+                <span>Product-2</span>
+                <span>200</span>
+                <button onclick="decrement('product2')">-</button>
+                <span id="product2-quantity">0</span>
+                <button onclick="increment('product2')">+</button>
+            </div>
+            <div class="product">
+                <span>Product-3</span>
+                <span>300</span>
+                <button onclick="decrement('product3')">-</button>
+                <span id="product3-quantity">0</span>
+                <button onclick="increment('product3')">+</button>
+            </div>
+        </div>
+        <div class="cart">
+            <h2>Cart</h2>
+            <div id="cart-contents">
+                
+            </div>
+            <div class="total">
+                <span>Total :</span>
+                <span id="total">0</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
